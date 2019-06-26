@@ -27,6 +27,7 @@ module.exports = {
             // Babel を利用する
             loader: "babel-loader",
             // Babel のオプションを指定する
+            exclude: /node_modules/,
             options: {
               presets: [
                 // プリセットを指定することで、ES2019 を ES5 に変換
