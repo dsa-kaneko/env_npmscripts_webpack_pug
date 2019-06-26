@@ -1,0 +1,40 @@
+block vars
+  - var path = './';
+  - var url = '';
+  - var keywords = '';
+  - var description = '';
+  - var title = '';
+  - var page_name = '';
+  - var page_class = '';
+  - var path = '';
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    meta(http-equiv="X-UA-Compatible" content="IE=Edge")
+    link(rel="canonical" href!=url)
+    title #{title}
+    meta#viewport(name="viewport",content="width=device-width")
+    meta(name="keywords",content=keywords)
+    meta(name="description",content=description)
+    meta(name="format-detection" content="telephone=no")
+    meta(property="og:locale",content="ja_JP")
+    meta(property="og:title",content=title)
+    meta(property="og:site_name",content="")
+    meta(property="og:description",content=description)
+    meta(property="og:type",content="website")
+    meta(property="og:url",content!=url)
+    meta(property="og:image",content!=url + "")
+    meta(property="twitter:title",content=title)
+    meta(property="twitter:description",content=description)
+    meta(property="twitter:card",content="summary_large_image")
+    meta(property="twitter:url",content!=url)
+    meta(property="twitter:image",content!=url + "")
+    link(rel="shortcut icon" href!=url + "")
+    block page_style
+  body(id=page_name,class=page_class)
+    block contents
+      
+    block end_body
+      script(type="text/javascript",src=path + "js/main.js")
+    block page_script

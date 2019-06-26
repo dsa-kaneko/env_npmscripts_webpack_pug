@@ -1,0 +1,19 @@
+extends ./pug/_base
+
+block vars
+  - var path = './';
+  - var url = 'variable-url';
+  - var keywords = 'variable-keywords';
+  - var description = 'variable-description';
+  - var title = 'variable-title';
+  //- var page_name = '';
+  //- var page_class = '';
+
+block page_style
+  link(rel="stylesheet", type="text/css", href=path + "css/index.css")
+  
+block contents
+  p.test click
+block page_script
+  script(type="text/javascript",src=path + "/js/top.js")
+  
