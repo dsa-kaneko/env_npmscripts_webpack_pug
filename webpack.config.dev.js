@@ -41,8 +41,7 @@ module.exports = {
   },
   devServer: {
     contentBase: path.join(__dirname, 'dist'),
-    host: '192.168.0.71',
-    port: 8000,
+    useLocalIp: true,
     watchContentBase: true,
     open: true
 
